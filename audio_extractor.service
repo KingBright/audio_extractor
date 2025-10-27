@@ -1,0 +1,13 @@
+[Unit]
+Description=Audio Extractor Service
+After=network.target
+
+[Service]
+User=root
+Group=root
+WorkingDirectory=/opt/audio_extractor
+ExecStart=/opt/audio_extractor/backend
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
